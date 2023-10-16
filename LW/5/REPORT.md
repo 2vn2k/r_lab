@@ -19,7 +19,9 @@
 ```
 00, ,*,sep
 sep,*,<,nulls
-nulls,0,x,nulls nulls,x,<,nulls nulls,1,=,rep
+nulls,0,x,movr nulls,1,=,rep nulls, ,>,replnulls
+replnulls,x,0,replnulls replnulls,0,>,replnulls replnulls,*,<,rep
+movr,x,<,nulls
 rep,0,6,copy0 rep,1,9,copy1 rep,6,<,rep rep,9,<,rep rep,x,<,rep rep, ,>,repl
 movb,0,<,movb movb,1,<,movb movb,*,<,rep
 copy0,0,>,copy0 copy0,1,>,copy0 copy0,6,>,copy0 copy0,9,>,copy0 
