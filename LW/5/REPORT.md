@@ -20,7 +20,8 @@
 00, ,*,sep
 sep,*,<,nulls
 nulls,0,x,movr nulls,1,=,rep nulls, ,>,replnulls
-replnulls,x,0,replnulls replnulls,0,>,replnulls replnulls,*,<,rep
+replnulls,x,0,replnulls replnulls,0,>,replnulls replnulls,*, ,replnulls replnulls, ,>,past0
+past0, ,0,fin
 movr,x,<,nulls
 rep,0,6,copy0 rep,1,9,copy1 rep,6,<,rep rep,9,<,rep rep,x,<,rep rep, ,>,repl
 movb,0,<,movb movb,1,<,movb movb,*,<,rep
