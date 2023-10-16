@@ -18,12 +18,17 @@
 6. Протокол:
 ```
 00, ,*,sep
-sep,*,=,movb
-rep,0,6,copy0 rep,1,9,copy1 rep,6,<,rep rep,9,<,rep rep, ,>,repl
+sep,*,<,nulls
+nulls,0,x,movr nulls,1,=,rep
+movr,x,<,nulls
+rep,0,6,copy0 rep,1,9,copy1 rep,6,<,rep rep,9,<,rep rep,x,<,rep rep, ,>,repl
 movb,0,<,movb movb,1,<,movb movb,*,<,rep
-copy0,0,>,copy0 copy0,1,>,copy0 copy0,6,>,copy0 copy0,9,>,copy0 copy0,*,>,copy0 copy0, ,0,movb
-copy1,0,>,copy1 copy1,1,>,copy1 copy1,6,>,copy1 copy1,9,>,copy1 copy1,*,>,copy1 copy1, ,1,movb
-repl,6,0,repl repl,9,1,repl repl,0,>,repl repl,1,>,repl repl,*, ,move_one_letter_right_then_fin
+copy0,0,>,copy0 copy0,1,>,copy0 copy0,6,>,copy0 copy0,9,>,copy0 
+copy0,x,>,copy0 copy0,*,>,copy0 copy0, ,0,movb
+copy1,0,>,copy1 copy1,1,>,copy1 copy1,6,>,copy1 copy1,9,>,copy1 
+copy1,x,>,copy1 copy1,*,>,copy1 copy1, ,1,movb
+repl,6,0,repl repl,9,1,repl repl,x,0,repl repl,0,>,repl repl,1,>,repl 
+repl,*, ,move_one_letter_right_then_fin
 move_one_letter_right_then_fin, ,>,fin
 fin,1,>,fin fin,0,>,fin fin, ,#,fin
 ```
