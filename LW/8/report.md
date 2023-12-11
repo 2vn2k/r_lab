@@ -27,45 +27,32 @@
    - обрадоваться завершению выполнения лабораторной работы
 6. Протокол:
 ```c
-┌──(nikita㉿kali)-[~]
-└─$ cat LW8$.c
+┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+└─$ ls
+helloworld.c  makefile.o  report.md
+                                                                                
+┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+└─$ cat helloworld.c
 #include <stdio.h>
 
-
 int main(){
-    printf("Hello, world!\n");
+  printf("Hello, world!\n");
+  return 0;
 }
-
-┌──(nikita㉿kali)-[~]
-└─$ gcc LW8$.c -o compile
-
-┌──(nikita㉿kali)-[~]
-└─$ cat compile
-далее идёт текст в километр длиной
-
-┌──(nikita㉿kali)-[~]
-└─$ gcc LW8$.c -o compile_error
-LW8$.c: In function 'main':
-LW8$.c:5:30: error: expected ';' before '}' token
-    5 |     printf("Hello, world!\n")
-      |                              ^
-      |                              ;
-    6 | }
-      | ~
-
-┌──(nikita㉿kali)-[~]
-└─$ gcc -std=c99 -Wall -pedantic LW8$.c && ./a
+                                                                                
+┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+└─$ cat makefile.o  
+all:
+	gcc ./helloworld.c
+	./a.out
+	rm a.out                                                                                
+┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+└─$ make -f makefile.o
+gcc ./helloworld.c
+./a.out
 Hello, world!
+rm a.out
 
-┌──(nikita㉿kali)-[~]
-└─$ gcc -std=c99 -Wall -pedantic LW8$.c && .a
-LW8$.c: In function 'main':
-LW8$.c:5:30: error: expected ';' before '}' token
-    5 |     printf("Hello, world!\n")
-      |                              ^
-      |                              ;
-    6 | }
-      | ~
 ```
 Результат компиляции я записал только для правильного случая. Если ошибиться, то будет выдано лишь то, что написано в протоколе.
 7. Выводы: эта лабораторная работа сделана. Я узнал, где можно детально изучить каждый этап выполнения программы, а также начал изучение языка С.
