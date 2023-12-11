@@ -27,11 +27,11 @@
    - обрадоваться завершению выполнения лабораторной работы
 6. Протокол:
 ```c
-┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+┌──(nikita㉿kali)-[~/git/git_labs/lab_8]
 └─$ ls
 helloworld.c  makefile.o  report.md
                                                                                 
-┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+┌──(nikita㉿kali)-[~/git/git_labs/lab_8]
 └─$ cat helloworld.c
 #include <stdio.h>
 
@@ -40,13 +40,13 @@ int main(){
   return 0;
 }
                                                                                 
-┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+┌──(nikita㉿kali)-[~/git/git_labs/lab_8]
 └─$ cat makefile.o  
 all:
 	gcc ./helloworld.c
 	./a.out
 	rm a.out                                                                                
-┌──(daniil㉿localhost)-[~/git/git_labs/lab_8]
+┌──(nikita㉿kali)-[~/git/git_labs/lab_8]
 └─$ make -f makefile.o
 gcc ./helloworld.c
 ./a.out
